@@ -1,4 +1,4 @@
-# Java and Docker memory limit experiments
+# Java and Docker memory limit experiments
 
 ## Playing with Docker memory limits, Java versions and JVM flags
 
