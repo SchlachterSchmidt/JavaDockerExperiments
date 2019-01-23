@@ -1,0 +1,5 @@
+FROM java:openjdk-8u111
+
+COPY MemEat.class /MemEat.class
+
+CMD ["/usr/bin/java", "MemEat"]
