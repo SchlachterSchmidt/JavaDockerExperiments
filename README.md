@@ -20,7 +20,7 @@ docker build -t <tag> -f <Dockerfile> .
 docker run -m 100m <tag>
 ```
 
-## Experiment 1 - Run the app in Java 8u111 with no JVM flag
+## Experiment 1 - Run the app in Java 8u111 with no JVM flag
 Running the app we can see two things:
 - Java thinks it still has a lot of memory left
 - Docker is killing the process because it is comsuming all available resources
