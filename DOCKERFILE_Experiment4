@@ -1,0 +1,5 @@
+FROM adoptopenjdk/openjdk8
+
+COPY MemEat.class /MemEat.class
+
+CMD ["/opt/java/openjdk/bin/java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "MemEat"]
