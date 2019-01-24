@@ -31,14 +31,14 @@ The difference here is that we are telling the JVM how much memory is available.
 Java knows how much memory it is allowed to consume and will throw OutOfMemory exceptions accordingly.
 This is much better, but raises another problem. We need to maintain the memory limits for the container and the JVM separately. Furthermore, the memory available to the container cannot be used to 100% by the JVM as there are other processes using memory as well.
 
-## Experiment 3 - Running the app in Java 8u144
+## Experiment 3 - Running the app in Java 8u144
 Some new flags were introduced to address this issue. Specifically, to make the JVM use the CGroup memory limit of the underlying linux OS, which in turn is set by Docker. So, we have to specify the memory limit only once.
 
 Without these flags Docker will kill the app for us.
 
 Update: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap are now enabled by default for this base image (upgraded to 8u172) and so this now passes the test as well
 
-## Experiment 4 -  Running the app in Java 8u144 with UseCGroupMemoryLimitForHeap flag
+## Experiment 4 -  Running the app in Java 8u144 with UseCGroupMemoryLimitForHeap flag
 To use the new flag we also need to enable experimental options. Adding the following flags to the JVM makes it use the CGroup memory limit:
   -XX:+UnlockExperimentalVMOptions
   -XX:+UseCGroupMemoryLimitForHeap
