@@ -43,3 +43,8 @@ To use the new flag we also need to enable experimental options. Adding the foll
   -XX:+UnlockExperimentalVMOptions
   -XX:+UseCGroupMemoryLimitForHeap
 Running the app with these two flags will cause it to throw OutOfMemory exceptions.
+
+## Experiment 5 - Java 10
+Runs with the new -XX:+UseContainerSupport flag by default
+
+## Experiment 6 - Java 10 and manually disabling the -XX:-UseContainerSupport flag

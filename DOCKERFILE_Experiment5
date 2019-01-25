@@ -1,0 +1,5 @@
+FROM adoptopenjdk/openjdk10
+
+COPY MemEat.class /MemEat.class
+
+CMD ["/opt/java/openjdk/bin/java", "MemEat"]
